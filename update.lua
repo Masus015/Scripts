@@ -9,9 +9,9 @@ update_state = false
 local script_vers = 1
 local script_vers_text = "1"
 local script_path = thisScript().path
-local script_url = "https://raw.githubusercontent.com/Masus015/Scripts/main/update.ini"
+local script_url = "https://raw.githubusercontent.com/Masus015/Scripts/main/update.lua"
 local update_path = getWorkingDirectory() .. "/update.ini"
-local update_url = ""
+local update_url = "https://raw.githubusercontent.com/Masus015/Scripts/main/update.ini"
 
 
 function main()
@@ -50,5 +50,5 @@ end
 
 
 function cmd_update(arg)
-    sampShowDialog(1000,"Приветствие","Привет","Закрыть","",0)
+    sampShowDialog(1000,"Приветствие v2.0","Приветик","Закрыть","",0)
 end
