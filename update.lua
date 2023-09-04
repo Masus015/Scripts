@@ -36,7 +36,7 @@ function main()
 
         if update_state then
             downloadUrlToFile(script_url,script_path,function(id, status)
-                if status == dlstatus.STATUS_ENDDOWNOLOADDATA then
+                if status == dlstatus.STATUS_ENDDOWNLOADDATA then
                     sampAddChatMessage("Ñêðèïò óñïåøíî îáíîâëåí! Âåðñèÿ:" .. updateini.info.vers_text, -1)
                     thisScript():reload()
                 end
