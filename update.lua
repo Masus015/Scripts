@@ -22,7 +22,7 @@ function main()
 
     downloadUrlToFile(update_url,update_path,function(id, status)
         if status == dlstatus.STATUS_ENDDOWNLOADDATA then
-            updateini = inicfg.load(nill, update_path)
+            updateini = inicfg.load(nil, update_path)
             if tonumber(updateini.info.vers) > script_vers then 
                 sampAddChatMessage("Íàéäåíî îáíîâëåíèå. Èäåò çàãðóçêà.",-1)
                 update_state = true
