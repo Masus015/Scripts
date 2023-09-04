@@ -21,10 +21,10 @@ function main()
     sampRegisterChatCommand("update", cmd_update)
 
     downloadUrlToFile(update_url,update_path,function(id, status)
-        if status == dlstatus.STATUS_ENDDOWNOLOADDATA then
+        if status == dlstatus.STATUS_ENDDOWNLOADDATA then
             updateini = inicfg.load(nill, update_path)
             if tonumber(updateini.info.vers) > script_vers then 
-                sampAddChatMessage("Найдено обновление. Идет загрузка.",-1)
+                sampAddChatMessage("ГЌГ Г©Г¤ГҐГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ. Г€Г¤ГҐГІ Г§Г ГЈГ°ГіГ§ГЄГ .",-1)
                 update_state = true
             end
             os.remove(update_path)
@@ -37,7 +37,7 @@ function main()
         if update_state then
             downloadUrlToFile(script_url,script_path,function(id, status)
                 if status == dlstatus.STATUS_ENDDOWNOLOADDATA then
-                    sampAddChatMessage("Скрипт успешно обновлен! Версия:" .. updateini.info.vers_text, -1)
+                    sampAddChatMessage("Г‘ГЄГ°ГЁГЇГІ ГіГ±ГЇГҐГёГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­! Г‚ГҐГ°Г±ГЁГї:" .. updateini.info.vers_text, -1)
                     thisScript():reload()
                 end
             end)
@@ -50,5 +50,5 @@ end
 
 
 function cmd_update(arg)
-    sampShowDialog(1000,"Приветствие v2.0","Приветик","Закрыть","",0)
+    sampShowDialog(1000,"ГЏГ°ГЁГўГҐГІГ±ГІГўГЁГҐ v2.0","ГЏГ°ГЁГўГҐГІГЁГЄ","Г‡Г ГЄГ°Г»ГІГј","",0)
 end
